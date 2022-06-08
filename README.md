@@ -1,2 +1,2 @@
 # Entregable2
-Entregable 2
+Entregable2
