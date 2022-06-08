@@ -13,14 +13,14 @@ let Bienvenida = "Mensaje de bienvenida"
 function elegirDestino() 
 {
     let edad = prompt("Por favor, para ingresar al sitio debemos validar tu edad. Por favor ingresa tu edad");
-    Bienvenida = alert("Bievenido a tu aerolínea de confianza!");
     
     if(edad < 18) {
 
-        alert("Para poder comprar pasajes, debes ser mayor de 18 años")
+        alert("Para poder comprar pasajes, debes ser mayor de 18 años");
     
     } else 
         {
+        Bienvenida = alert("Bievenido a tu aerolínea de confianza!");
         eleccion = prompt("Elija su destino: \n 1 - Roma ($1000) \n 2 - Milan ($2000) \n 3 - Venezia ($3000)")
         
             switch(eleccion) 
@@ -44,10 +44,10 @@ function elegirDestino()
 elegirDestino() 
 
 function calcularCosto() {
-    cantidadPasajes = prompt("Ingrese la cantidad de pasajes que quiere comprar. Tenga en cuenta que a los mismos se le aplicará un impuesto de 15% sobre el valor total");
-    let costoCiudad = 1000 * eleccion;
-
+    do(edad > 18)
     while(cantidadPasajes > 0) {
+        cantidadPasajes = prompt("Ingrese la cantidad de pasajes que quiere comprar. Tenga en cuenta que a los mismos se le aplicará un impuesto de 15% sobre el valor total");
+        let costoCiudad = 1000 * eleccion;
         let costo = cantidadPasajes * costoCiudad;
         let impuestoDestino = costo * impuesto / 100;
         let costoTotal = impuestoDestino + costo;
@@ -55,7 +55,6 @@ function calcularCosto() {
         alert("El valor total de los pasajes CON impuestos es de: "+costoTotal);
         cantidadPasajes = 0;
     }
-
 }
 
 calcularCosto()
